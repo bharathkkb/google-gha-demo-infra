@@ -85,3 +85,8 @@ output "bastion_kubectl_command" {
   description = "kubectl command using the local proxy once the bastion_ssh command is running"
   value       = "HTTPS_PROXY=localhost:8888 kubectl get pods --all-namespaces"
 }
+
+output "gha_sa" {
+  description = "SA used by GitHub to auth GCP"
+  value       = google_service_account.gha_gke_sa.email
+}

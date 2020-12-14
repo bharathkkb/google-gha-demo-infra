@@ -1,5 +1,5 @@
 /**
- * Copyright 2018 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,7 +15,8 @@
  */
 
 module "gke" {
-  source = "terraform-google-modules/kubernetes-engine/google//modules/safer-cluster"
+  source  = "terraform-google-modules/kubernetes-engine/google//modules/safer-cluster"
+  version = "~> 12.2.0"
 
   project_id              = module.gke-project.project_id
   name                    = var.cluster_name

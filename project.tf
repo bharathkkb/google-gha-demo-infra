@@ -32,8 +32,6 @@ module "gke-project" {
     "monitoring.googleapis.com",
     "containerregistry.googleapis.com",
     "container.googleapis.com",
-    "binaryauthorization.googleapis.com",
-    "stackdriver.googleapis.com",
     "iap.googleapis.com",
     "secretmanager.googleapis.com",
   ]

@@ -21,7 +21,7 @@ module "runner-mig" {
   region         = var.region
   repo_name      = var.repo_name
   repo_owner     = var.repo_owner
-  repo_url       = var.repo_url
+  repo_url       = "https://github.com/${var.repo_owner}/${var.repo_name}"
   gh_token       = var.gh_token
   create_network = false
   network_name   = module.vpc.network_name

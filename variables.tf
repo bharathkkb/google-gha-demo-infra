@@ -93,24 +93,29 @@ variable "ip_source_ranges_ssh" {
   default     = []
 }
 
-variable "repo_url" {
-  type        = string
-  description = "Repo URL for the Github Action"
-  default     = "https://github.com/bharathkkb-org/test-repo"
-}
 variable "repo_name" {
   type        = string
   description = "Name of the repo for the Github Action"
-  default     = "test-repo"
 }
 
 variable "repo_owner" {
   type        = string
   description = "Owner of the repo for the Github Action"
-  default     = "bharathkkb-org"
 }
 
 variable "gh_token" {
   type        = string
-  description = "Github token that is used for generating Self Hosted Runner Token"
+  description = "Github token that is used for generating the Self Hosted Runner Token"
+}
+
+variable "create_github_secrets" {
+  type        = bool
+  description = "If set to true, Terraform will configure GitHub secrets used in the demo (SA_KEY and GCP project)"
+  default     = true
+}
+
+variable "create_sa_key" {
+  type        = bool
+  description = "If set to true, Terraform will create a SA key. This is automatically enabled if create_github_secrets is set."
+  default     = true
 }
